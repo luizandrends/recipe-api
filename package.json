@@ -9,7 +9,6 @@
     "dev:server": "ts-node-dev -r tsconfig-paths/register --inspect --ignore-watch node_modules src/shared/infra/http/server.ts",
     "test": "jest"
   },
-
   "dependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/cors": "^2.8.6",
@@ -17,6 +16,7 @@
     "@types/hapi__joi": "^17.1.3",
     "@types/jest": "^26.0.4",
     "@types/reflect-metadata": "^0.1.0",
+    "axios": "^0.20.0",
     "celebrate": "^12.1.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
