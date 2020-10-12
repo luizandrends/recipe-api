@@ -7,6 +7,7 @@ import IRecipesInterface from '../interfaces/IRecipesInterface';
 interface IRequest {
   ingredient_1?: string | undefined;
   ingredient_2?: string | undefined;
+  ingredient_3?: string | undefined;
 }
 
 @injectable()
@@ -19,10 +20,12 @@ class FindRecipesService {
   public async execute({
     ingredient_1,
     ingredient_2,
+    ingredient_3,
   }: IRequest): Promise<AxiosResponse> {
     const findAllRecipes = await this.recipesRepository.findRecipes({
       ingredient_1,
       ingredient_2,
+      ingredient_3,
     });
 
     if (!findAllRecipes) {
