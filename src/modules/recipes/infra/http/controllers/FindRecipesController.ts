@@ -19,7 +19,24 @@ class FindRecipesController {
       ingredient_3: ingredient3,
     });
 
-    return response.json(findRecipes);
+    const keyWordsArray = [];
+
+    if (ingredient_1) {
+      keyWordsArray.push(ingredient1);
+    }
+
+    if (ingredient_2) {
+      keyWordsArray.push(ingredient2);
+    }
+
+    if (ingredient_3) {
+      keyWordsArray.push(ingredient3);
+    }
+
+    return response.json({
+      keywords: keyWordsArray,
+      recipes: findRecipes,
+    });
   }
 }
 
