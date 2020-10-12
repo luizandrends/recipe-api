@@ -19,7 +19,9 @@ class RecipesRepository implements IRecipesInterface {
       `/?i=${ingredient_1}, ${ingredient_2}, ${ingredient_3}`
     );
 
-    return response.data;
+    const { results } = response.data;
+
+    return results;
   }
 }
 

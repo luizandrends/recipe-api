@@ -10,6 +10,10 @@ interface IRequest {
   ingredient_3?: string | undefined;
 }
 
+interface IResponse {
+  title: string;
+}
+
 @injectable()
 class FindRecipesService {
   constructor(
