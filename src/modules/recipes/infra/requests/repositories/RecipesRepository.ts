@@ -1,6 +1,7 @@
 import { AxiosResponse } from 'axios';
 
 import getGiphy from '@modules/recipes/utils/getGiphy';
+import parseStringToArray from '@modules/recipes/utils/parseStringToArray';
 
 import recipePuppyApi from '@modules/recipes/apis/recipePuppy';
 
@@ -37,6 +38,14 @@ class RecipesRepository implements IRecipesInterface {
       );
 
       const giphyUrl = await getGiphy(findRecipeByName.title);
+
+      const parsedIngredientsToArray = parseStringToArray(
+        findRecipeByName.ingredients
+      );
+
+      Object.assign(findRecipeByName, {
+        ingredients: parsedIngredientsToArray,
+      });
 
       Object.assign(findRecipeByName, { link: findRecipeByName.href });
       findRecipeByName.href = undefined;
