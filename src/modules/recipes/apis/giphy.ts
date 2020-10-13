@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const giphyApi = axios.create({
-  baseURL: 'api.giphy.com/v1/gifs/search',
+  baseURL: 'http://api.giphy.com/v1/gifs',
 });
 
 export default giphyApi;

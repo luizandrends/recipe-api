@@ -28,6 +28,9 @@
       "prettier/prettier": "error",
       "class-methods-use-this": "off",
       "no-useless-constructor": "off",
+      "no-plusplus": "off",
+      "no-loop-func": "off",
+      "no-await-in-loop": "off",
       "@typescript-eslint/no-var-requires": "off",
       "@typescript-eslint/no-unused-vars": ["error", {
         "argsIgnorePattern": "_"
