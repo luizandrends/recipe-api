@@ -39,18 +39,18 @@ class RecipesRepository implements IRecipesInterface {
 
       const giphyUrl = await getGiphy(findRecipeByName.title);
 
-      const parsedIngredientsToArray = parseStringToArray(
+      const parsedIngredientsToArray = await parseStringToArray(
         findRecipeByName.ingredients
       );
 
-      Object.assign(findRecipeByName, {
+      await Object.assign(findRecipeByName, {
         ingredients: parsedIngredientsToArray,
       });
 
-      Object.assign(findRecipeByName, { link: findRecipeByName.href });
+      await Object.assign(findRecipeByName, { link: findRecipeByName.href });
       findRecipeByName.href = undefined;
 
-      Object.assign(findRecipeByName, { gif: giphyUrl });
+      await Object.assign(findRecipeByName, { gif: giphyUrl });
       findRecipeByName.thumbnail = undefined;
     }
 
