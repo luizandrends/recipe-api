@@ -7,6 +7,8 @@ const parseStringToArray = (regularString: string): string[] => {
     array.push(separateByComma[i]);
   }
 
+  array.sort();
+
   return array;
 };
 

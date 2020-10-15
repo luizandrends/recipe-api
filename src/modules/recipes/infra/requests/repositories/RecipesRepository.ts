@@ -43,8 +43,6 @@ class RecipesRepository implements IRecipesInterface {
         findRecipeByName.ingredients
       );
 
-      parsedIngredientsToArray.sort();
-
       Object.assign(findRecipeByName, {
         ingredients: parsedIngredientsToArray,
       });
