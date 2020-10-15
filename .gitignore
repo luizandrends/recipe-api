@@ -6,4 +6,5 @@ coverage
 digitalocean
 digitalocean.pub
 .env
+.env.test
 ormconfig.json
