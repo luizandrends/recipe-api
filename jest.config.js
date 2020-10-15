@@ -8,20 +8,17 @@ module.exports = {
   // Stop running tests after `n` failures
   // bail: 0,
 
-  // Respect "browser" field in package.json when resolving modules
-  // browser: false,
-
   // The directory where Jest should store its cached dependency information
-  // cacheDirectory: "/private/var/folders/m7/3yjbp5ds77xb33vt96mwlwq00000gn/T/jest_dx",
+  // cacheDirectory: "/private/var/folders/55/zrt1cshj4sx0jy2d91jg9l9c0000gn/T/jest_dx",
 
   // Automatically clear mock calls and instances between every test
   clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
-  collectCoverage: true,
+  // collectCoverage: false,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  collectCoverageFrom: ['<rootDir>/src/modules/**/services/*.ts'],
+  // collectCoverageFrom: undefined,
 
   // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',
@@ -31,8 +28,16 @@ module.exports = {
   //   "/node_modules/"
   // ],
 
+  // Indicates which provider should be used to instrument code for coverage
+  coverageProvider: 'v8',
+
   // A list of reporter names that Jest uses when writing coverage reports
-  coverageReporters: ['text-summary', 'lcov'],
+  // coverageReporters: [
+  //   "json",
+  //   "text",
+  //   "lcov",
+  //   "clover"
+  // ],
 
   // An object that configures minimum threshold enforcement for coverage results
   // coverageThreshold: undefined,
@@ -125,6 +130,9 @@ module.exports = {
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
   // setupFilesAfterEnv: [],
 
+  // The number of seconds after which a test is considered as slow and reported as such in the results.
+  // slowTestThreshold: 5,
+
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   // snapshotSerializers: [],
 
@@ -165,7 +173,8 @@ module.exports = {
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
-  //   "/node_modules/"
+  //   "/node_modules/",
+  //   "\\.pnp\\.[^\\/]+$"
   // ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them

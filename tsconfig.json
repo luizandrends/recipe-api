@@ -5,24 +5,17 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
+    "allowJs": true,
     "strictPropertyInitialization": false,
     "baseUrl": "./src",
-    "allowJs": true,
     "paths": {
-      "@modules/*": [
-        "modules/*"
-      ],
-      "@config/*": [
-        "config/*"
-      ],
-      "@shared/*": [
-        "shared/*"
-      ]
+      "@modules/*": ["modules/*"],
+      "@config/*": ["config/*"],
+      "@shared/*": ["shared/*"]
     },
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "forceConsistentCasingInFileNames": true,
-  },
-  "exclude": ["jest.config.js","prettier.config.js", "node_modules", "coverage"],
+    "forceConsistentCasingInFileNames": true
+  }
 }
