@@ -1,4 +1,4 @@
-import giphyApi from '../src/modules/recipes/apis/giphy';
+import giphyApi from '../../src/modules/recipes/apis/giphy';
 
 describe('Get gyphy', () => {
   it('should be able to get giphy from the giphy API', async () => {
